@@ -1,0 +1,258 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+
+header {
+    background-color: #164a75;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+.logo img {
+    width: 200px;
+
+    background-color: #164a75;
+}
+
+/* Menu */
+.menu-item{
+    text-decoration: none;
+
+    transition: all .3s;
+}
+
+.menu-item:hover {
+    background-color: #D42D2E;
+
+    color: #f2f2f2;
+}
+
+
+/* Home */
+.home {
+    min-height: 85vh;
+
+    background: url('./../assets/bg-home.jpg') no-repeat;
+    background-size: cover;
+}
+
+.home .container-fluid {
+    min-height: 85vh;
+
+    background-color: #f5f5f5e1;
+    background-blend-mode: overlay;
+}
+
+.home__left img {
+    width: 100%;
+    transition: all .2s;
+}
+
+.home__right h1 {
+    color: #D42D2E;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+/* Calcular */
+.calcular {
+    min-height: 100vh;
+}
+
+.calcular .container {
+    padding-right: 0;
+}
+
+.calcular h2,
+label {
+    color: #D42D2E;
+}
+
+.calcular .form {
+    background-color: #D0D0D0;
+    padding: 50px 20px;
+
+}
+
+.calcular img {
+    max-height: 85vh;
+}
+
+#resultado{
+    color: #D42D2E;
+
+    font-weight: 800;
+
+    font-size: 45px;
+
+    transition: all .4s;
+}
+
+/* Quem somos */
+.quem-somos {
+    min-height: 100vh;
+}
+
+.quem-somos .container {
+    padding-right: 0;
+}
+
+.quem-somos a {
+    text-decoration: none;
+}
+
+.quem-somos__bg {
+    background: url('./../assets/bg-quem-somos.webp') no-repeat;
+    background-size: cover;
+
+    background-color: #ffffffc2;
+    background-blend-mode: overlay;
+}
+
+.quem-somos__perfil .container {
+    background-color: #000000e3;
+
+    padding: 50px 0;
+    margin: 15px;
+
+    border-radius: 8px;
+}
+
+.quem-somos img {
+    border-radius: 350px;
+    border: #f2f2f2 solid 10px;
+    width: 250px;
+}
+
+/* Fale conosco */
+.fale-conosco {
+    min-height: 50vh;
+
+    background-color: #252525;
+    background-blend-mode: overlay;
+}
+
+.fale-conosco .container {
+    padding-right: 0;
+    padding-bottom: 0;
+
+}
+
+.fale-conosco__titulo img {
+    margin-right: -7px;
+}
+
+.fale-conosco__links .col {
+    padding-top: 60px;
+}
+
+.fale-conosco__links a {
+    color: #f2f2f2;
+
+    text-decoration: none;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    margin-bottom: 10px;
+}
+
+.fale-conosco__social-links {
+    width: 45px;
+    height: 45px;
+
+    margin-top: 10px;
+    margin-right: 10px;
+
+    border-radius: 100px;
+
+    background-color: #a88307;
+
+    transition: all .2s;
+}
+
+.fale-conosco__social-links:hover {
+    background-color: #f5ca3dda;
+}
+
+.fale-conosco__content {
+    min-height: 30vh;
+    padding-right: 90px;
+}
+
+.fale-conosco__social-icons {
+    position: relative;
+    bottom: 5%;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .home__right h1 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 800;
+    }
+    .calcular .container {
+        flex-basis: 100%;
+        /* Define a largura da coluna como 100% da linha */
+        margin-bottom: 10px;
+        /* Adiciona uma margem inferior para separar as colunas */
+        justify-content: center;
+        padding: 0;
+    }
+
+    .quem-somos .container {
+        padding: 0;
+    }
+
+    .quem-somos__perfil .container {
+        padding: 50px;
+        margin: 15px;
+    }
+
+    .fale-conosco .col {
+        display: flex;
+        justify-content: center;
+    }
+
+    .fale-conosco__titulo h1 {
+        width: 100%;
+
+        margin-top: 30px;
+
+        text-align: center;
+    }
+
+    .fale-conosco a {
+        justify-content: center;
+    }
+
+    .fale-conosco .container {
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .fale-conosco__social-icons {
+        position: relative;
+        top: -50px;
+        left: 8vw;
+    }
+}

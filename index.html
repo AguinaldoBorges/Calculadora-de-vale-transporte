@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/guinastrap.css">
+    <title>SP CALC - Calculadora de Vale Transporte</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row d-flex justify-between ph-5 pv-2 align-center ">
+                <!-- Logo -->
+                <div class="col align-center logo">
+                    <img src="./assets/Group 21.png" alt="logo da empresa">
+                </div>
+                <!-- Menu -->
+                <div class="col ">
+                    <nav class=" menu d-flex align-center justify-center ph-2">
+                        <a href="#home" class="text-light menu-item">Home</a>
+                        <a href="#calcular" class="text-light menu-item">Calcular</a>
+                        <a href="#quem-somos" class="text-light menu-item">Quem somos</a>
+                        <a href="#fale-conosco" class="text-light menu-item">Fale conosco</a>
+                    </nav>
+                </div>
+                <!-- Conta -->
+                <div class="col align-center menu autenticar">
+                    <div class="menu-item">
+                        <a href="#" class="text-light autenticar__login">Login</a>
+                    </div>
+                    <span class="text-light"> | </span>
+                    <div class="menu-item">
+                        <a href="#" class="text-light autenticar__signup">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <!-- home -->
+        <section class="home align-center bg-secondary" id="home">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-2 home__left">
+                            <img src="./assets/home-bilhete-unico.webp" alt="">
+                        </div>
+                        <div class="col col-2 home__right">
+                            <h1>SP CALC - Calculadora de Vale Transporte</h1>
+                            <p>Bem-vindo a uma nova era de praticidade e eficiência no planejamento de seu vale transporte!</p>
+                            <p>Não importa se você utiliza ônibus, metrô, trem ou uma combinação deles, o SP CALC está aqui para ajudar. Basta inserir as informações necessárias, como tarifas, dias de uso e integrações, e nossa calculadora inteligente fará todo o trabalho pesado para você.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- calcular -->
+        <section class="calcular bg-light" id="calcular">
+            <div class="container">
+                <div class="row d-flex align-center  pv-3">
+                    <div class="col col-4 bg-primary">
+                        <h1 class="pv-1 ph-2 mgv-0 text-light">Calcular Vale Transporte</h1>
+                    </div>
+                    <div class="col col-2">
+                        <div class="form">
+                            <!-- Ônibus -->
+                            <div class="row d-flex justify-between">
+                                <div class="col col-2">
+                                    <label for="onibus">Valor Unitário Ônibus</label>
+                                    <input type="number" name="onibus" id="onibus" class="form-item"
+                                        placeholder="Ex.4,30" value="4.30" />
+                                </div>
+                                <div class="col col-2">
+                                    <label for="onibusIntegracao">Integração</label>
+                                    <select class="form-select" placeholder="item" name="onibusIntegracao"
+                                        id="onibusIntegracao">
+                                        <option value="Sim">Sim</option>
+                                        <option value="Não" selected>Não</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Trilhos -->
+                            <div class="row d-flex justify-between mgv-4">
+                                <div class="col col-2">
+                                    <label for="trilhos">Valor Unitário Trêm/Metrô</label>
+                                    <input type="number" name="trilhos" id="trilhos" class="form-item"
+                                        placeholder="Ex. 4,30" value="4.30" />
+                                </div>
+                                <div class="col col-2">
+                                    <label for="trilhosIntegracao">Integração</label>
+                                    <select class="form-select" placeholder="item" name="trilhosIntegracao"
+                                        id="trilhosIntegracao">
+                                        <option value="Sim" selected>Sim</option>
+                                        <option value="Não">Não</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Quantidade de dias de uso -->
+                            <div class="row d-flex justify-between mgv-4">
+                                <div class="col col-2">
+                                    <label for="bilheteEstudante">Bilhete de Estudante</label>
+                                    <select class="form-select" placeholder="item" name="bilheteEstudante"
+                                        id="bilheteEstudante">
+                                        <option value="Sim">Sim</option>
+                                        <option value="Não" selected>Não</option>
+                                    </select>
+                                </div>
+                                <div class="col col-2">
+                                    <label for="diasDeUso">Dias de uso</label>
+                                    <input type="number" name="diasDeUso" id="diasDeUso" class="form-item"
+                                        placeholder="Ex. 20" value="22" />
+
+                                </div>
+                            </div>
+                            <div class="row justify-center">
+                                <div class="col col-4">
+                                    <h1 id="resultado" class="text-center">R$ 0.00</h1>
+                                </div>
+                                <button onclick="calcular()" class="btn btn-danger col col-1">Calcular</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col  col-2 d-flex justify-right">
+                        <img src="./assets/produtos-1.png" alt="leitor de bilhete unico">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- quem somos -->
+        <section class="quem-somos quem-somos__bg" id="quem-somos">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-4 bg-primary">
+                        <h1 class="pv-1 ph-2 mgv-0 text-light">Quem somos</h1>
+                    </div>
+                    <!-- perfil -->
+                    <div class="col col-2 justify-center quem-somos__perfil">
+                        <div class="container">
+                            <div class="row justify-center">
+                                <div class="col pv-2 justify-center">
+                                    <img src="./assets/aguinaldo-rosto.jpg" alt="foto do aguinaldo - Desenvolvedor">
+                                </div>
+                            </div>
+                            <div class="row justify-center">
+                                <div class="col justify-center">
+                                    <h1 class="text-center text-danger mgv-0">Aguinaldo Borges</h1>
+                                    <h2 class="text-center text-light ">Desenvolvedor de Software
+                                        Web - Fullstack</h2>
+                                </div>
+                            </div>
+                            <div class="row justify-center pv-2">
+                                <a class="btn btn-danger col text-center" href="https://www.aguinaldoborges.com.br/"
+                                    target="_blank">Visitar Portifólio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-2 bg-light mgv-3">
+                        <div class="ph-3">
+                            <h1>Olá!</h1>
+                            <p>
+                                Me chamo Aguinaldo, sou casado, tecladista nas horas vagas, e meu primeiro contato
+                                com programação foi em 2014. Tive a oportunidade de criar uma solução web e programar
+                                usando VBA por 1 ano na empresa que trabalhei. Foi um ano maravilhoso de aprendizados e
+                                descobertas! A principal descoberta foi que essa seria a área na qual realmente queria
+                                atuar.
+                            </p>
+                            <p>
+                                Sou formado em Análise e Desenvolvimento de Sistemas e foquei no desenvolvimento web.
+                                Minha experiência mais recente foi de 1 ano em uma startup de acessória previdenciária,
+                                onde atuei como Desenvolvedor Back-end, adquiri muitos aprendizados e fui muito feliz.
+                                Além de lidar com APIs, Banco de dados e Http, também atuei no front-end de sistemas e
+                                sites da empresa.
+                                Lá tive a oportunidade de trabalhar com HTML/CSS, Javascript, Bootstrap, VueJs, Angular,
+                                Node.js, MySQL, Jira e Github.
+
+                            </p>
+                            <p>
+                                Para mim é tranquilo me comunicar, colaborar com outros membros da equipe e geralmente
+                                me adequo rápido a uma nova ferramenta, método ou tecnologia.
+                                Atualmente estou estudando React e Inglês.
+                            </p>
+                            <p>
+                                Ah, desenvolvi meu próprio portfólio, onde é possível encontrar alguns projetos que
+                                realizei. Fique a vontade para visitá-lo em <a
+                                    href="https://www.aguinaldoborges.com.br/" target="_blank"><strong
+                                        class="text-danger">www.aguinaldoborges.com.br.</strong></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- fale conosco -->
+        <section class="fale-conosco bg-dark" id="fale-conosco">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-4 fale-conosco__titulo">
+                        <h1 class="pv-1 ph-2 mgv-0 text-light">Fale conosco</h1>
+                        <div class="ph-2">
+                            <img src="./assets/Group 5488.png" alt="traço ondulado">
+                            <img src="./assets/Group 5488.png" alt="traço ondulado">
+                            <img src="./assets/Group 5488.png" alt="traço ondulado">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row fale-conosco__links">
+                    <div class="col col-1">
+                        <a href="#"><img src="./assets/Mask group.png" alt="seta para direita" class="mgh-2"> Página
+                            Inicial</a>
+                        <a href="#calcular"><img src="./assets/Mask group.png" alt="seta para direita" class="mgh-2">
+                            Calcular</a>
+                        <a href="#quem-somos"><img src="./assets/Mask group.png" alt="seta para direita" class="mgh-2">
+                            Quem
+                            somos</a>
+                        <div class="ph-2 d-flex">
+                            <a href="https://www.linkedin.com/in/aguinaldo-borges-dev" target="_blank"
+                                style="width: auto;">
+                                <img src="./assets/linkedin-branco.png" alt="logo do linkedin"
+                                    class="fale-conosco__social-links">
+                            </a>
+                            <a href="https://github.com/AguinaldoBorges" target="_blank" style="width: auto;">
+                                <img src="./assets/github-branco.jpg" alt="logo do github"
+                                    class="fale-conosco__social-links">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col col-1">
+                        <a href="https://www.aguinaldoborges.com.br/" target="_blank"><img src="./assets/Mask group.png"
+                                alt="seta para direita" class="mgh-2">
+                            Contato</a>
+                        <a href="https://www.aguinaldoborges.com.br/" target="_blank"><img src="./assets/Mask group.png"
+                                alt="seta para direita" class="mgh-2">
+                            Suporte</a>
+                        <a href="https://www.aguinaldoborges.com.br/" target="_blank"><img src="./assets/Mask group.png"
+                                alt="seta para direita" class="mgh-2"> FAQ</a>
+                    </div>
+                    <div class="col col-1">
+                        <a href="https://www.aguinaldoborges.com.br/" target="_blank"><img src="./assets/Mask group.png"
+                                alt="seta para direita" class="mgh-2"> Termos de
+                            uso</a>
+                        <a href="https://www.aguinaldoborges.com.br/" target="_blank"><img src="./assets/Mask group.png"
+                                alt="seta para direita" class="mgh-2"> Política
+                            de privacidade</a>
+                        <a href="https://www.aguinaldoborges.com.br/" target="_blank"><img src="./assets/Mask group.png"
+                                alt="seta para direita" class="mgh-2"> Mapa do
+                            site</a>
+                    </div>
+                    <div class="col col-1">
+                        <a href="https://www.aguinaldoborges.com.br/" target="_blank"><img src="./assets/Mask group.png"
+                                alt="seta para direita" class="mgh-2">Trabalhe
+                            conosco</a>
+                        <a href="https://www.aguinaldoborges.com.br/" target="_blank"><img src="./assets/Mask group.png"
+                                alt="seta para direita" class="mgh-2">Parcerias</a>
+                        <a href="https://www.aguinaldoborges.com.br/" target="_blank"><img src="./assets/Mask group.png"
+                                alt="seta para direita" class="mgh-2">Apoio ao
+                            cliente</a>
+                    </div>
+
+                </div>
+                <div class="row fale-conosco__content justify-center">
+                    <div class="col col-4 fale-conosco__social-icons justify-center align-bottom">
+                        <p class="col col-4 text-center text-light">
+                            Aguinaldo Borges copyright © 2023 SP Calc. Todos os direitos reservados.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="./js/index.js" />
+</body>
+
+</html>
